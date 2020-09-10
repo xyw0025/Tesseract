@@ -7,14 +7,14 @@ output_path = "./output/"
 config="./config_set"
 # What the file config_set does here is to remove all the spaces between every character in the output
 
-def read_image_to_data(folder_path, filename, formt="xml", lang="chi_tra_TRAIN"):
+def read_image_to_data(folder_path, filename, format="xml", lang="chi_tra_TRAIN"):
 	output_name = filename.split('.')[0]
-	if formt == "xml":
+	if format == "xml":
 		output_name += ".xml"
 		output_file = pytesseract.image_to_alto_xml(folder_path, lang=lang, config=config)
 		with open(output_path + output_name, 'w+b') as f:
 			f.write(output_file)
-	if formt == "txt":
+	if format == "txt":
 		output_name += ".txt"
 		output_file = pytesseract.image_to_string(folder_path, lang=lang, config=config)
 		with open(output_path + output_name, 'w') as f:
