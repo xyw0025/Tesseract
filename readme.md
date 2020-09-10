@@ -1,5 +1,5 @@
 The file `chi_tra_TRAIN.traineddata` should be put under path /usr/local/share/tessdata/ , etc.  
-If it's installed succesfully, chi_tra_TRAIN can be seen using command "tesseract --list-langs"  
+If it's installed succesfully, chi_tra_TRAIN can be seen using command "tesseract --list-langs".  
 
 
 ### to run:  
@@ -11,7 +11,7 @@ ex:
 	python testTesseract.py -i input_data_example/ -f xml
 ```
 
-It will iterate over files under specified folder
+It will iterate over files under specified folder.  
 By default, language is chosen as chi_tra_TRAIN, the output files will be placed in ./output
 
 

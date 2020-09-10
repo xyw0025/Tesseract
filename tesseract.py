@@ -11,7 +11,7 @@ def read_image_to_data(folder_path, filename, formt="xml", lang="chi_tra_TRAIN")
 	output_name = filename.split('.')[0]
 	if formt == "xml":
 		output_name += ".xml"
-		output_file = pytesseract.image_to_alto_xml(folder_path, lang=lang)
+		output_file = pytesseract.image_to_alto_xml(folder_path, lang=lang, config=config)
 		with open(output_path + output_name, 'w+b') as f:
 			f.write(output_file)
 	if formt == "txt":
