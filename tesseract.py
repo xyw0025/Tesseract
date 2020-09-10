@@ -14,7 +14,7 @@ def read_image_to_data(folder_path, filename, format="xml", lang="chi_tra_TRAIN"
 		output_file = pytesseract.image_to_alto_xml(folder_path, lang=lang, config=config)
 		with open(output_path + output_name, 'w+b') as f:
 			f.write(output_file)
-	if format == "txt":
+	elif format == "txt":
 		output_name += ".txt"
 		output_file = pytesseract.image_to_string(folder_path, lang=lang, config=config)
 		with open(output_path + output_name, 'w') as f:
